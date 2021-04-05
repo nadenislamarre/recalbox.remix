@@ -306,6 +306,7 @@ menu "Utils"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/flatpak/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/pm-utils/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/mangohud/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/batocera-rpcs3/Config.in"
 endmenu
 
 menu "Libraries"
