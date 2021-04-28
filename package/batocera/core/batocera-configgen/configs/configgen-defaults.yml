@@ -392,3 +392,6 @@ flatpak:
 supervision:
   emulator: libretro
   core:     potator
+scv:
+  emulator: libretro
+  core:     emuscv
