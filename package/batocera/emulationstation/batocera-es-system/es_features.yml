@@ -3908,3 +3908,6 @@ xemu:
                 "Center":   center
                 "Scale":    scale
                 "Stretch":  stretch
+
+model2emu:
+  features: []
