@@ -18,7 +18,7 @@ mixer() {
 card=`echo $1 | sed 's/[^0-9]*//g'`
 
 # set common mixer params
-mixer $card Master 100%
+mixer $card Master 0db
 mixer $card Front 100%
 mixer $card PCM 0db
 mixer $card Synth 100%
@@ -154,6 +154,12 @@ mixer $card 'FRDDR_B SRC 1 EN' on
 mixer $card 'SPDIFOUT SRC SEL' 'IN 1'
 mixer $card 'SPDIFOUT Playback' on
 
+# Amlogic G12A/G12B/SM1 S/PDIF
+mixer $card 'FRDDR_B SINK 1 SEL' 'OUT 3'
+mixer $card 'FRDDR_B SRC 1 EN' on
+mixer $card 'SPDIFOUT SRC SEL' 'IN 1'
+mixer $card 'SPDIFOUT Playback' on
+
 # Amlogic GX HDMI and S/PDIF
 mixer $card 'AIU HDMI CTRL SRC' 'I2S'
 mixer $card 'AIU SPDIF SRC SEL' 'SPDIF'
@@ -163,6 +169,10 @@ mixer $card 'HDMI CTRL SRC' 'I2S'
 
 # Odroid Go Advance Speaker
 mixer $card 'Playback Path' 'SPK'
+
+# ES8316 headphone jack
+mixer $card 'Right Headphone Mixer Right DAC' on
+mixer $card 'Left Headphone Mixer Left DAC' on
 
 exit 0
 )&
